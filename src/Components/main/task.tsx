@@ -13,7 +13,11 @@ const tasks: Task[] = [
 
 ]
 export default function Task(){
-    
+    const [checked, setChecked] = useState<boolean>(false);
+
+    const handleCheck = () => {
+        
+    }
     return(
       <div className="flex flex-col space-y-4">
         {tasks.map((task, index) => (
@@ -22,6 +26,7 @@ export default function Task(){
             className="flex items-center justify-between bg-white p-4 rounded shadow-sm hover:shadow-md transition"
           >
             <div>
+            <input type="checkbox" />
               <h2 className="text-base font-medium">{task.title}</h2>
               <p className="text-sm text-gray-500">
                 {task.tag} - {task.date}
